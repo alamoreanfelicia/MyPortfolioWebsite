@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --brown: rgb(197, 160, 111);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* Nav bar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 10px 0;
+    background: var(--brown);
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .logo img{
+    width: 30%;
+    height: 30%;
+}
+
+.navbar .menu li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: var(--brown);
+}
+
+
+.navbar.sticky .menu li a:hover{
+    color: black;
+}
+
+/* Burger Menu */
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Home */
+.home{
+    display: flex;
+    background: url(images/black_background.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 150px;
+}
+
+.home .home-content .text1 {
+    font-size: 30px;
+}
+
+.home .home-content .text2 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.home .home-content .text3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text3 span{
+    color: var(--brown);
+    font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: var(--brown);
+    color: white;
+    font-size: 25px;
+    padding: 10px 35px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: 2px solid var(--brown);
+    transition: all 0.5s ease;
+}
+
+.home .home-content a:hover{
+    color: var(--brown);
+    background: none;
+}
+
+
+/* About */
+section{
+    padding: 100px 0;
+}
+
+.about{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.about .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: var(--brown);
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+    content: "this is me";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: var(--brown);
+}
+
+.about .about-content .right p{
+    text-align: justify;
+    font-size: 20px;
+}
