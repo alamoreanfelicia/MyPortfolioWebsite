@@ -81,6 +81,10 @@
         
     }
 
+    .projects .projects-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 
 }
 
@@ -100,6 +104,9 @@
     .home .home-content a{
         font-size: 18px;
         /* padding: 8px 20px; */
+    }
+    .projects .projects-content .card{
+        width: 100%;
     }
 }
 

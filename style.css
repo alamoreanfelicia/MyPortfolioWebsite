@@ -2,6 +2,8 @@
 
 :root {
     --brown: rgb(197, 160, 111);
+    --green: rgb(30, 53, 30);
+    --dark_green: rgb(18, 32, 18);
 }
 
 * {
@@ -125,16 +127,16 @@
 }
 
 
-/* About */
+/* All similar section styling code */
 section{
     padding: 100px 0;
 }
 
-.about{
+.about, .projects, .skills{
     font-family: 'Quicksand', sans-serif;
 }
 
-.about .title {
+section .title {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -144,7 +146,7 @@ section{
     font-family: 'Ubuntu', sans-serif;
 }
 
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -155,8 +157,7 @@ section{
     transform: translateX(-50%);
 }
 
-.about .title::after{
-    content: "this is me";
+section .title::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -165,6 +166,11 @@ section{
     padding: 5px;
     background: white;
     transform: translateX(-50%);
+}
+
+/* About */
+.about .title::after{
+    content: "this is me";
 }
 
 .about .about-content{
@@ -202,4 +208,68 @@ section{
 .about .about-content .right p{
     text-align: justify;
     font-size: 20px;
+}
+
+/* Projects */
+.projects{
+    color: white;
+    background: var(--green);
+}
+
+
+
+.projects .title::after{
+    background-color: var(--green);
+    color: white;
+    content: "first projects";
+}
+
+.projects .projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects .projects-content .card{
+    width: calc(33% - 20px);
+    background: var(--dark_green);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    box-shadow: 5px 10px rgb(10, 17, 10);
+    transition: transform 0.5s;
+}
+
+.projects .projects-content .card:hover{
+    transform: translateY(-5px);
+    background: var(--brown);
+}
+
+.projects .projects-content .card i{
+    font-size: 50px;
+    color: var(--brown);
+}
+
+.projects .projects-content .card:hover i{
+    color: var(--green);
+}
+
+.projects .projects-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* Skills */
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .title::after{
+    content: "what I know"
 }
