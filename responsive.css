@@ -140,6 +140,22 @@
     .projects .projects-content .card{
         width: 100%;
     }
+    .mentors .vertical .vertical-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        /* width: 100%;
+        height: 100%; */
+    }
+    .mentors .vertical .vertical-content .right{
+        width: 100%;
+        height: 100%;
+    }
+    .mentors .vertical .vertical-content .right h1{
+        text-align: center;
+    }
 }
 
 @media (max-width: 500px){
@@ -151,5 +167,23 @@
     }
     .home .home-content .text3 {
         font-size: 23px;
+    }
+    .mentors .vertical ul li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .mentors .vertical::before{
+        left: 0;
+    }
+    .mentors .vertical ul li:nth-child(odd){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+    }
+    .mentors .vertical ul li:nth-child(odd)::after{
+        transform: translate(-50%, -50%);
+        left: -30px;
     }
 }

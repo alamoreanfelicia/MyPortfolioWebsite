@@ -373,6 +373,16 @@ section .title::after{
     position: relative;
 }
 
+.mentors .vertical::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--brown);
+}
+
 .mentors .vertical ul{
     list-style: none;
 }
@@ -386,14 +396,42 @@ section .title::after{
     position: relative;
 }
 
+.mentors .vertical ul li:hover::after{
+    background-color: var(--dark_green);
+}
+
 .mentors .vertical ul li:nth-child(odd){
     float: left;
     clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0 20px 20px;
 }
 
 .mentors .vertical ul li:nth-child(even){
     float: right;
     clear: left;
+    transform: translateX(30px);
+    border-radius: 0 20px 20px 20px;
+}
+
+.mentors .vertical ul li::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--brown);
+    border-radius: 50%;
+    top: 0;
+}
+
+.mentors .vertical ul li:nth-child(odd)::after{
+    transform: translate(50%, -50%);
+    right: -30px;
+}
+
+.mentors .vertical ul li:nth-child(even)::after{
+    transform: translate(-50%, -50%);
+    left: -30px;
 }
 
 .mentors .vertical ul li:last-child{
