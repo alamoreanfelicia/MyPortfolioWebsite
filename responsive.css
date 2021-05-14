@@ -160,6 +160,13 @@
 }
 
 @media (max-width: 500px){
+    .home {
+        background: url(images/black_background_responsive.png) no-repeat center;
+        background-position-x: -320px;
+    }
+    .home .max-width{
+        margin: 100px 0 auto 10px;
+    }
     .home .home-content .text1 {
         font-size: 20px;
     }
@@ -168,6 +175,12 @@
     }
     .home .home-content .text3 {
         font-size: 23px;
+    }
+    .home .social{
+        bottom: 46%;
+    }
+    .home .social a{
+        margin: 2px;
     }
     .mentors .vertical ul li{
         display: flex;
@@ -186,5 +199,17 @@
     .mentors .vertical ul li:nth-child(odd)::after{
         transform: translate(-50%, -50%);
         left: -30px;
+    }
+}
+
+@media (max-width: 415px){
+    .home {
+        background-position-x: -405px;
+    }
+}
+
+@media (max-width: 380px){
+    .home {
+        background-position-x: -450px;
     }
 }

@@ -15,3 +15,10 @@ $(document).ready(function(){
     
 })
 
+// typing animation
+var typed = new Typed(".typing", {
+    strings: ["an Engineer", "a Student", "a Junior Web Developer", "a Junior Web Designer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
