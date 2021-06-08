@@ -135,7 +135,7 @@ html{
 
 .home .social{
     position: absolute;
-    bottom: 30%;
+    top: 70%;
 }
 
 .home .social a{

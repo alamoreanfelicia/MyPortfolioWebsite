@@ -17,7 +17,6 @@
     .max-width{
         padding: 0 50px;
     }
-
     .menu-btn{
         display: block;
         z-index: 999;
@@ -138,6 +137,12 @@
     .home .home-content a{
         font-size: 18px;
     }
+    .home .social{
+        top: 66%;
+    }
+    .home .social a{
+        margin: 2px;
+    }
     .projects .projects-content .card{
         width: 100%;
     }
@@ -177,7 +182,7 @@
         font-size: 23px;
     }
     .home .social{
-        bottom: 46%;
+        top: 55%;
     }
     .home .social a{
         margin: 2px;
@@ -206,10 +211,16 @@
     .home {
         background-position-x: -405px;
     }
+    .home .social{
+        top: 75%;
+    }
 }
 
-@media (max-width: 380px){
+@media (max-width: 390px){
     .home {
         background-position-x: -450px;
+    }
+    .home .social{
+        top: 50%;
     }
 }
